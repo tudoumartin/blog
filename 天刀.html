@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天涯明月刀</title>
+    <link rel="stylesheet" href="css/common.css">
+
+    <style>
+        html,body {
+            height: 100%;
+        }
+        header {
+            position: relative;
+            height: 100%;
+            min-height: 600Px;
+            background: url(http://game.gtimg.cn/images/wuxia/picture/wallpaper/w139-1920x1024.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        header::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255,.2);
+        }
+       
+        .logo {
+            color: #333;
+            font: 32px STXingkai;
+            float: left;
+            margin-top: 10px;
+        }
+        nav > ul {
+            float: right;
+            margin-right: 30px;
+            margin-top: 10px;
+        }
+        nav > ul > li {
+            float: left;
+        }
+        nav a {
+            display: inline-block; 
+            color: #db4040;
+            font-size: 15px;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .nav a:hover {
+            background: rgb(179, 236, 179);
+        }
+        header {
+            position: relative;
+        }
+        .intro {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%,-50%);
+        }
+        .intro h2 {
+           width: 260px;
+           font: 40px STxiwei;
+           font-weight: bold;
+           color: rgb(57, 108, 117);
+           border-bottom: 2px solid rgb(57, 108, 117);
+           margin: auto;
+        }
+        .intro h1 {
+            font: 45px STliti;
+            font-weight: bold;
+            border-bottom: 2px solid black;
+            margin: 20px;
+        }
+        section {
+            text-align: center;
+        }
+        section h1 {
+            padding-top: 30px;
+            margin-bottom: 20px;
+            font-size: 50px;
+            border-top: 1px solid rgba(0,0,0,0);
+        }
+        .qinglong li {
+            float: left;
+            width: 33.33%;
+            padding: 10px 35px;
+            margin-top:40px;
+        }
+        section li h3 {
+            margin: 20px;
+            font-size: 20px;
+        }
+        .qinglong > ul > li > .por {
+            display: inline-block;
+            height: 180px;
+            width: 180px;
+            border-radius: 90px;
+        }
+        .qinglong {
+            background-color: rgba(220, 230, 130, 0.2)
+        }
+        .simeng {
+            background-color: rgba(130, 230, 200, 0.2)
+        }
+        .gong {
+            background: url(https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=35f7e6673cd12f2ece05a96677f9b25f/a8773912b31bb051b60234983c7adab44aede058.jpg) 50% 10% no-repeat;
+        }
+        .ming {
+            background: url(https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=447437562d7f9e2f70351a0e270b8e19/35a85edf8db1cb13acabb9a3d754564e93584b44.jpg) 70% 20% no-repeat;
+        }
+        .yan {
+            background: url(https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=fefab758b63eb13544c7b0bd9e25cfee/58ee3d6d55fbb2fb3de6c3a2454a20a44723dcb5.jpg) 50% 10% no-repeat;
+        }
+        .simeng li {
+            float: left;
+            width: 50%;
+            padding: 10px 35px;
+            margin-top:40px;
+        }
+        .simeng > ul > li > .por {
+            display: inline-block;
+            height: 210px;
+            width: 450px;
+        }
+        .han {
+            background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=637087271,3349900050&fm=27&gp=0.jpg) center 8% no-repeat ; 
+        }
+        .di {
+            background: url(http://img2.imgtn.bdimg.com/it/u=20547585,2913944627&fm=27&gp=0.jpg) center 12% no-repeat;
+        }
+        .wan {
+            background: url(http://img5.imgtn.bdimg.com/it/u=1515002274,145513949&fm=26&gp=0.jpg) left top no-repeat;
+        }
+        .shui {
+            background: url(http://img3.imgtn.bdimg.com/it/u=2953686254,4252806587&fm=27&gp=0.jpg) left 4% no-repeat;
+        }
+        .bahuang li {
+            margin-top: 80px; 
+            position: relative;
+        }
+        .bahuang li:last-child {
+            margin-bottom: 50px;
+        }
+        .bahuang li:nth-child(odd) {
+            padding-right: calc(50% - 128px);
+            text-align: right;
+        }
+        .bahuang li:nth-child(odd) img {
+            float: right;
+        }
+        .bahuang li:nth-child(even){
+            padding-left: calc(50% - 128px);
+            text-align: left;
+        }
+        .bahuang li:nth-child(even) img{
+            float: left;
+        }
+        .bahuang li:nth-child(odd) dl {
+            padding:0 286px 0 100px;
+        }
+        .bahuang li:nth-child(even) dl {
+            padding:0 100px 0 286px;
+        }
+        .bahuang li dt {
+            font-size: 30px;
+            line-height: 60px;
+        }
+        .bahuang li dd:nth-child(2) {
+            color: #db4040;
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+        .bahuang li::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .bahuang img {
+            width: 256px;
+            height: 192px;
+            border-radius: 50%;
+            border: 4px solid rgb(130, 243, 232);
+        }
+        .bahuang li::before {
+            content: '';
+            display: inline-block;
+            height: 190px;
+            width: 2px;
+            background-color: rgb(130, 243, 232);
+            position: absolute;
+            top: 192px;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .bahuang li:last-child::before {
+            height: 0px;
+        }
+        .bahuang {
+            background-color: rgb(202, 218, 241);
+        }
+        footer {
+            background: url(http://game.gtimg.cn/images/wuxia/picture/wallpaper/w64-1920x1024.jpg) center center no-repeat;
+        }
+        footer {
+            text-align: center;
+        }
+        footer h1 {
+            font-size: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0,0,0,0);
+            color: #000;
+        }
+        footer h5 {
+            font-size: 20px;
+            color: #222;
+            margin:20px auto 60px;
+        }
+        footer form {
+            max-width: 1100px;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+        footer {
+            height: 100%;
+            min-height: 600px;
+        }
+        footer input {
+            width: 455px;
+            height: 62px;
+            border: 2px solid #eee;
+            border-radius: 4px;
+            font-size: 15px;
+            padding: 15px;
+            background-color: #fff;
+        }
+        footer textarea {
+            width: 455px;
+            height: 206px;
+            border: 2px solid #eeeeee;
+            border-radius: 4px;
+            font-size: 15px;
+            padding: 15px;
+            font-family: Microsoft YaHei;
+            color: #666;
+            background-color: #fff;
+        }
+        footer .form-group {
+            margin: 5px;
+            display: inline-block;
+        }
+        footer .message {
+            float: right;
+        }
+        footer .dialog {
+            text-align: left;
+        }
+        footer .dialog-v {
+            width:480px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="clearfix layout">
+            <a class="logo" href="" >天涯明月刀</a>
+            <ul class="nav">
+                <li>
+                    <a href="#qinglong">青龙会</a>
+                </li>
+                <li>
+                    <a href="#simeng">四盟</a>
+                </li>
+                <li>
+                    <a href="#bahuang">八荒</a>
+                </li>
+                <li>
+                    <a href="#chuanshu">传书</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <h2>恭迎少侠</h2> 
+            <h1>江湖那么大 何处不天涯</h1>
+            <a class="button" href="#">浪迹天涯</a>
+         </div>
+    </header>
+    <main class="layout">
+        <section class="clearfix qinglong" id="qinglong">
+            <h1>青龙会</h1>
+            <p>武林中最强的势力，号令盟会、统率八方，无敢不从。</p>
+            <ul >
+                <li>
+                    <span class="por gong"></span>
+                    <h3>公子羽</h3>
+                    <p>我有这个江湖上最高贵的出身，最出众的天赋，最高强的武功，最卓绝的智谋；我拥有最强大最黑暗的组织，和最美貌最忠心的女人；我翻手为云、覆手为雨——但，这一切都不是我想要的。</p>
+                </li>
+                <li>
+                    <span class="por ming"></span>
+                    <h3>明月心</h3>
+                    <p>智谋堪比诸葛，身若一缕清风，天下之事了于胸，可称巾帼英雄。浮生流年易过，红尘恍如一梦，情深缘浅叹匆匆，魂梦且伴君同。</p>
+                </li>
+                <li>
+                    <span class="por yan"></span>
+                    <h3>燕南飞</h3>
+                    <p>一名弃婴被扔在边陲小镇的蔷薇丛中。婴孩身上被花刺扎出了片片血迹，面上却露出了笑容。贫穷的洗衣妇燕小英路过，再三踌躇之后，终于选择抱养了婴孩。村中的穷秀才为其取名为燕南飞。</p>
+                </li>
+             </ul>
+        </section>
+        <section class="clearfix simeng" id="simeng">
+            <h1>四盟</h1>
+            <p>天下盟，江湖路，任武林前尘尽翻覆。
+                帝王业，空杀戮，看万里龙吟寒江渡。</p>
+            <ul>
+                <li>
+                    <span class="por han"></span>
+                    <h3>寒江城</h3>
+                    <p>盟会中之智者。原青龙会三龙首、公认的武林第一智者：百晓生创建。现任盟主曲无忆。</p>
+                </li>
+                <li>
+                    <span class="por di"></span>
+                    <h3>帝王州</h3>
+                    <p>盟会中之霸者。原青龙会四龙首、富有野心的枭雄：上官金虹创建。现任盟主叶知秋。</p>
+                </li>
+                <li>
+                    <span class="por wan"></span>
+                    <h3>万里沙</h3>
+                    <p>盟会中之侠者。原青龙会五龙首、天波府杨家将少主：杨延玉创建。现任盟主离玉堂。</p>
+                </li>
+                <li>
+                    <span class="por shui"></span>
+                    <h3>水龙吟</h3>
+                    <p>盟会中之逸者。原青龙会六龙首、移花宫花无缺弟子：子桑不寿创建。现任盟主唐青枫。</p>
+                </li>
+            </ul>
+        </section>
+        <section class="clearfix bahuang" id="bahuang">
+            <h1>八荒</h1>
+            <ul>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w142-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>真武</dt>
+                        <dd>灵妙潜通乘风起，太极玄虚若镜清</dd>
+                        <dd>真武祖师张梦白本是书香门第出身，屡试不中时竟在襄州山中偶遇一似癫似疯之道人扶摇子。得其点化，张梦白以文入武，更习得驱影之术，弃文而从武。此后游历八方，更曾拜访太白与风无痕，独孤飞云等人交好。 扶摇子仙游之后，张梦白闭关十年，终大彻大悟——“天下不定，道法何存？”于是在循扶摇子之手书，寻至真武山九室岩，开宗立派。此地苍松峻岭、云雾缭绕，真武弟子观想云海，与自身驱影离渊之武学相互印证，武学成就斐然，口碑传颂于江湖之中。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w129-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>丐帮</dt>
+                        <dd>醉来豪气不可收，嘘作长虹贯牛斗</dd>
+                        <dd>黄巢起义中，某金姓将领因不满义军暴虐残害百姓，聚集志同道合之将士脱离黄巢军队，并沿途吸纳天下流民，传授武艺。一时间应者云集，而队伍中最多之人，乃是无衣无食，以乞讨为生的乞丐。金姓将领爽朗重义，与众人皆以兄弟相交，后索性亦作乞丐装束，世人均以“金乞丐”称之。他所领导的这个组织则被称为“丐帮”。此后丐帮能人辈出，雄踞君山总舵，帮下九大分舵，遍布天南海北。天下乞丐，均可加入丐帮；丐帮兄弟，俱都重视手足情谊。五代十国的乱世之中，丐帮不仅存续下来，更发展到帮众数十万的规模，人称“江湖第一大帮”。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w134-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>神威</dt>
+                        <dd>神威倒卷翻空浪，一举冲霄气势雄</dd>
+                        <dd>后周副都指挥使韩通于954年创立“神威营”，忠诚守护后周皇室安全。韩通之子韩微，曾几次劝说父亲除去后周重臣赵匡胤，但韩通却欣赏赵匡胤之人才气度，并未对其下手。后赵匡胤知晓此事，感念韩通之情。960年陈桥兵变之中，韩通全家被王彦升所杀，仅存一幼子韩守琼，在神威营全营将士拼死救助之下逃脱。十四年后，王彦升奉命返京，途经乾州之时，被韩守琼以神威枪法刺杀。太祖得知此事，叹道：“光烈暴忍，向难有驭者。今守琼替父夺之，天意也。”秘密吩咐不予追究，此事不了了之。 韩守琼报仇之后流亡江湖，与父亲旧部隐藏山野，刻苦练功并于雍熙三年创立神威堡，立足燕云，心怀天下。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w135-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>太白</dt>
+                        <dd>流星白羽光出匣，一剑无痕雪漫山</dd>
+                        <dd>风无痕本是开封府司录司参军事，负责协助捕门之人，利用强大的分析能力来推理查案。在多年的查案之中，风无痕因偶然机会获取本被认为是医书的《破穴论》一卷。风无痕从中领悟出一套专打敌人破绽穴位的剑法，此剑法招招不离人身一百零八处要穴，但又无特定招式；你可以说它只有一剑，亦可以说它绵绵不绝、源源不断，将天下所有剑法均融入其中，永无止境。风无痕将此套剑法，称为“无痕剑意”，更凭此剑法，辞去公职，一人一剑，闯荡江湖。后于太白山中遇“剑神”独孤飞云，终创立太白一派，名震江湖。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w137-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>唐门</dt>
+                        <dd>雾霭云从飞星落，半影相依扇中情</dd>
+                        <dd>蜀中唐氏，自魏晋起便为世家。五代十国之时，唐门少主唐郢化名卢郢，游历江南，更是进士及第，成为南唐的文武双进士，天下闻名。后更与南唐后主李煜相交莫逆。南唐被宋灭后，唐郢潜入开封，以南唐秘典飞花录中所载暗器手法，秘密射杀太祖，又以神奇的机关之术，悄然遁形，杳无踪迹。此后，蜀中唐门名震武林，其暗器、机关阵法以及用毒解毒之术俱乃独步。其子唐凌峰时，因天下奇毒冥河水之故，为武林所猜忌。后唐凌峰宣布，唐门再不用毒，单凭机关暗器两者，便足以安天下、傲群雄。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w139-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>天香</dt>
+                        <dd>竞夸天下双无绝，独立人间第一香</dd>
+                        <dd>华佗当年被处死之前，将其一生所学著为《青囊书》一卷。数百年后，少年桑柴子偶得此书，修习医术，其第一个救下之人，便是官宦千金员外之女梁知音。后梁知音与桑柴子姐弟相称，桑柴子精研青囊书中要义，梁知音则武学天赋惊人。两人将医武合一，创下独门武功。 后梁知音在东越偶入秘谷，见谷中百花烂漫，遍地锦绣，便隐居于此，更将此谷命名为“天香谷”。不久之后，因天风流作乱之故，梁知音救下渔女顾晚静，为偿其“女子自保”之心愿，开始陆续收授孤女为徒。天香一派名号，自此建立。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w153-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>五毒</dt>
+                        <dd>动游碧落心无碍，静藏深渊迹绝踪</dd>
+                        <dd>云滇地处西南，早年曾属蛮荒之地，蛇虫猛兽盛行，本地一支土著居民以当地五种蛇虫为尊后此一脉被中原人呼为“五毒”。后汉苗杂居，五毒中人接纳了不少远离中原、避世隐居的江湖高手。当地人常年以双刀与猛兽搏斗，经中原高手改良后，成为了一整套的五毒刀法，纵横西南，挡者披靡。除刀法之外，云滇气候潮湿，蛇虫众多。五毒人就地取材，捕捉本地蠹虫蛇蛛蝎蟾蜈等，以秘法炼制成粉，称之为“蜃”，以蜃气化雾攻击，除了可致敌眩晕昏迷之外，还可操控草木鱼虫来辅助战斗，更使得外人眼中所见的五毒，神秘莫测、奇诡无比。</dd>
+                    </dl> 
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w154-1024x768.jpg" alt="">
+                    <dl>
+                        <dt>神刀</dt>
+                        <dd>刀含杀气腾幽朔，萧飒寒芒泣鬼神</dd>
+                        <dd>路小佳是武林第一剑客荆无命的弟子，也是叶开傅红雪之过命好友。万马堂一战之后，路小佳见傅红雪叶开之母花白凤因失去复仇目标而沮丧，便鼓励她重建当年神刀堂之辉煌。路小佳不拘泥于门户之见，先后招揽了在中原游荡的魔教驯鹰高手乌高布族、孙浩然所携的神刀旧部，以及南齐北冷中“神铸”冷家的叛逆子弟冷皓轩父女……路小佳天生亲和，又有绝佳天分。他将魔教刀法与中原剑法、乌高布驯鹰术等结合起来，创出别具一格的神刀武功……</dd>
+                    </dl> 
+                </li>
+                <li>
+                    <img src="http://game.gtimg.cn/images/wuxia/picture/wallpaper/w166-1024x768.jpg" alt="">
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="layout" id="chuanshu">
+        <h1>传书</h1>
+        <h5>天涯未远</h5>
+        <form action="info" method="POST">
+            <div class="dialog">
+                <div class="dialog-v">
+                    <div class="form-group">
+                        <input type="text" placeholder="少侠大名">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="飞鸽传书">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="" id="" placeholder="千里传音">
+                    </div>
+                </div>
+                <div class="dialog-v message">
+                    <div class="form-group">
+                        <textarea name="" id="" cols="30" rows="10">小纸条</textarea>
+                    </div>  
+                </div>        
+            </div>
+        </form>
+        <a class="button" href="#">确认寄出</a>
+
+    </footer>
+</body>
+</html>
