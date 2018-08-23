@@ -81,7 +81,7 @@
             text-align: center;
         }
         section h1 {
-            padding-top: 30px;
+            padding-top: 60px;
             margin-bottom: 20px;
             font-size: 50px;
             border-top: 1px solid rgba(0,0,0,0);
@@ -127,6 +127,11 @@
             display: inline-block;
             height: 210px;
             width: 450px;
+        }
+        .simeng > div {
+            content: '';
+            padding: 400px;
+            border: 1px solid rgba(0,0,0,0);
         }
         .han {
             background: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=637087271,3349900050&fm=27&gp=0.jpg) center 8% no-repeat ; 
@@ -339,6 +344,7 @@
                     <p>盟会中之逸者。原青龙会六龙首、移花宫花无缺弟子：子桑不寿创建。现任盟主唐青枫。</p>
                 </li>
             </ul>
+            <div></div>
         </section>
         <section class="clearfix bahuang" id="bahuang">
             <h1>八荒</h1>
@@ -418,6 +424,11 @@
         <h5>天涯未远</h5>
         <form action="info" method="POST">
             <div class="dialog">
+                <div class="dialog-v message">
+                    <div class="form-group">
+                        <textarea name="" id="" cols="30" rows="10">小纸条</textarea>
+                    </div>  
+                </div>   
                 <div class="dialog-v">
                     <div class="form-group">
                         <input type="text" placeholder="少侠大名">
@@ -429,11 +440,7 @@
                         <input type="text" name="" id="" placeholder="千里传音">
                     </div>
                 </div>
-                <div class="dialog-v message">
-                    <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="10">小纸条</textarea>
-                    </div>  
-                </div>        
+                     
             </div>
         </form>
         <a class="button" href="#">确认寄出</a>
